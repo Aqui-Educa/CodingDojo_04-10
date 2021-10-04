@@ -2,14 +2,18 @@
 
 valor_kg = 37.00
 
-peso_grama = 0
+p = 9.25
+m = 18.50
+g = 27.75
 
-adicional = 2.50
+adicional = int(input("Deseja quantos adicionais? "))
 
+def tamanho():
+    
+    pass
 
-def preco(peso_grama):
-    if tamanho == p:
-        total = (tamanho / 1000) * valor_kg
+def preco(tamanho, adicional):
+    preco = tamanho + (adicional*2.50)
+    return preco
 
-
-print(preco(p))
+print(preco(p, adicional))
