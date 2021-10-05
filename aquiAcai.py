@@ -10,26 +10,30 @@ tamanho = str(input("Informe o tamanho desejado? ")).lower()
 adicional = int(input("Deseja quantos adicionais? "))
 
 def verificarTamanho(tamanho):
-    while tamanho not in ['p', 'm', 'g']:
-        
-   else:
-       if tamanho == 'p':
+    while tamanho in ['p', 'm', 'g']:
+        if tamanho == 'p':
             tamanho = p
-        
-        if tamanho == 'm':
+            return tamanho            
+    
+        elif tamanho == 'm':
             tamanho = m
+            return tamanho            
         
-        if tamanho == 'g':
-            tamanho = g
-            
-        return tamanho
-    #     print('Infome se P, M ou G: ')
-    #     tamanho = str(input("Informe o tamanho desejado? ")).lower()
-    # else:
-    #     pass
+        elif tamanho == 'g':
+            tamanho = g     
+            return tamanho
 
+        else:
+            print('Infome se P, M ou G: ')
+            tamanho = str(input("Informe o tamanho desejado? ")).lower()
+            continue 
+
+  
+
+verificarTamanho(tamanho)
 def preco(tamanho, adicional):
-    preco = tamanho + (adicional*2.50)
+
+    preco = tamanho + (adicional * 2.50)
     return preco
 
 print(verificarTamanho(tamanho))
