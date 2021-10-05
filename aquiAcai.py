@@ -28,13 +28,10 @@ def verificarTamanho(tamanho):
             tamanho = str(input("Informe o tamanho desejado? ")).lower()
             continue 
 
-  
-
-verificarTamanho(tamanho)
 def preco(tamanho, adicional):
-
+    tamanho = verificarTamanho(tamanho)
     preco = tamanho + (adicional * 2.50)
     return preco
 
-print(verificarTamanho(tamanho))
-print(preco(tamanho, adicional))
+print("O valor do açai é", verificarTamanho(tamanho))
+print("O valor do açai com adicionais é",preco(tamanho, adicional))
